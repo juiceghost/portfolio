@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 270px!important;
 }
 
 code {
@@ -26,6 +27,8 @@ code {
 .k-card-info {
   margin-top: 10px;
   min-height: 100px;
+/*   display: flex;
+  flex-direction: column; */
 }
 .k-card-title {
   font-size: 24px;
@@ -34,4 +37,47 @@ code {
 .k-card-subtitle {
   font-size: 16px;
   margin: 0px;
+}
+
+.k-card-github {
+  position: relative;
+  left: 265px;
+  bottom: 56px;
+}
+
+.k-card-livedemo {
+  position: relative;
+  right: 32px;
+}
+
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-appear-actove,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 150ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+.page {
+  position: absolute;
+  top: 57px;
+  left: 0;
+  right: 0;
+}
+.k-footer {
+  padding-top: 100px;
+}
+.k-nav {
+  z-index: 10000;
 }

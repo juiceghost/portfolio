@@ -4,10 +4,10 @@ import Content from '../Content';
 import Hero from '../Hero';
 
 const Contact = ({ data }) =>
-    <div>
+    <div className='page'>
         <Hero data={data} />
         <Content>
-            <p>Drop me an <a href='mailto:kristian.kjeldsen@kyh.se'>email</a></p>
+            <p>Drop me an <a href='mailto:kristian.kjeldsen@kyh.se'>email.</a></p>
         </Content>
     </div>
 

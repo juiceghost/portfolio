@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
-import portfolio from '../../assets/images/placeholder.jpg';
-import mp from '../../assets/images/placeholder.jpg';
+import portfolio from '../../assets/images/portfolio_k.jpg';
+import mp from '../../assets/images/mp.jpg';
 import fbauth from '../../assets/images/placeholder.jpg';
 
 import Card from '../Card';
@@ -15,18 +15,20 @@ class Carousel extends Component {
             items: [
                 {
                     id: 0,
-                    title: 'Portfolio',
-                    subTitle: 'My personal home page',
-                    imgSrc: portfolio,
-                    link: 'https://portfolio.kjeld.io',
+                    title: 'Morphed Profit',
+                    subTitle: 'Console-based programming editor',
+                    imgSrc: mp,
+                    srcLink: 'https://github.com/juiceghost/homebrew-mp',
+                    liveDemo: '',
                     selected: false
                 },
                 {
                     id: 1,
-                    title: 'Morphed Profit',
-                    subTitle: 'Console-based programming editor',
-                    imgSrc: mp,
-                    link: 'https://mp.kjeld.io',
+                    title: 'Portfolio',
+                    subTitle: 'My personal home page',
+                    imgSrc: portfolio,
+                    srcLink: 'https://github.com/juiceghost/portfolio',
+                    liveDemo: '/',
                     selected: false
                 },
                 {
@@ -34,7 +36,8 @@ class Carousel extends Component {
                     title: 'Firebase Auth',
                     subTitle: 'Demo of Firebase',
                     imgSrc: fbauth,
-                    link: 'https://fbauth.kjeld.io',
+                    srcLink: 'https://github.com/juiceghost/firebase-auth-livecode',
+                    liveDemo: '',
                     selected: false
                 }
             ]

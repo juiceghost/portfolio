@@ -4,7 +4,7 @@ import Hero from '../Hero';
 import Carousel from '../Carousel';
 
 const Home = ({ data }) =>
-    <div>
+    <div className='page'>
         <Hero data={data}>Home works!</Hero>
         <Carousel />
     </div>

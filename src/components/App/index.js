@@ -8,6 +8,7 @@ import {
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav'
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import '../../App.css';
 
 import Home from '../Home';
@@ -53,7 +54,7 @@ class App extends Component {
         return (
             <Router>
                 <Container className='p-0' fluid={true} >
-                    <Navbar className='border-bottom' bs='transparent' expand='lg'>
+                    <Navbar className='border-bottom k-nav' bs='transparent' expand='lg'>
 
                         <Navbar.Brand >Kristian Kjeldsen</Navbar.Brand>
                         <Navbar.Toggle className='border-0' aria-controls='navbar-toggle' />
@@ -67,17 +68,23 @@ class App extends Component {
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
-                    <Switch>
-                        <Route path='/about'>
-                            <About data={about} />
-                        </Route>
-                        <Route path='/contact'>
-                            <Contact data={contact} />
-                        </Route>
-                        <Route path='/'>
-                            <Home data={home} />
-                        </Route>
-                    </Switch>
+                    <Route render={({ location }) => (
+                        <TransitionGroup>
+                            <CSSTransition key={location.key} timeout={450} classNames='fade'>
+                                <Switch location={location}>
+                                    <Route path='/about'>
+                                        <About data={about} />
+                                    </Route>
+                                    <Route path='/contact'>
+                                        <Contact data={contact} />
+                                    </Route>
+                                    <Route path='/'>
+                                        <Home data={home} />
+                                    </Route>
+                                </Switch>
+                            </CSSTransition>
+                        </TransitionGroup>
+                    )} />
                     <Footer />
                 </Container>
             </Router>);
