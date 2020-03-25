@@ -14,6 +14,7 @@ import '../../App.css';
 import Home from '../Home';
 import About from '../About';
 import Contact from '../Contact';
+import Easyweb from '../Easyweb';
 import Footer from '../Footer';
 
 import * as ROUTES from '../../constants/routes';
@@ -63,7 +64,7 @@ class App extends Component {
                                 <Link className='nav-link' to={ROUTES.HOME}>Home</Link>
                                 <Link className='nav-link' to={ROUTES.ABOUT}>About</Link>
                                 <Link className='nav-link' to={ROUTES.CONTACT}>Contact</Link>
-
+                                <Link className='nav-link' to={ROUTES.EASYWEB}>Easyweb</Link>
 
                             </Nav>
                         </Navbar.Collapse>
@@ -77,6 +78,9 @@ class App extends Component {
                                     </Route>
                                     <Route path='/contact'>
                                         <Contact data={contact} />
+                                    </Route>
+                                    <Route path='/easyweb'>
+                                        <Easyweb />
                                     </Route>
                                     <Route path='/'>
                                         <Home data={home} />
